@@ -81,3 +81,17 @@ CA Incident Reports are expected to:
 7. **Inadequate Monitoring Post-Incident**:
    - Establish mechanisms to monitor the long-term effectiveness of implemented changes.
    - Be ready to revisit and revise solutions if subsequent issues indicate that the initial response was not entirely effective.
+  
+## Useful References:
+
+- Root Cause and Incident Analysis Methodologies:
+     - [Chesterton’s Fence](https://fs.blog/chestertons-fence/)
+     - [5 Whys](https://en.wikipedia.org/wiki/Five_whys)
+     - Multi/Second Order Thinking ([1](https://fs.blog/second-order-thinking/), [2](https://betterletter.substack.com/p/second-order-thinking), and [3](https://medium.com/@noahmp/second-order-thinking-3fc2a224b131
+))
+     - [CATWOE Analysis](https://www.toolshero.com/problem-solving/catwoe-analysis/)
+     - [Cause and Effect / Fishbone or Ishikawa](https://en.wikipedia.org/wiki/Ishikawa_diagram)
+     - [Drilling Down](https://sigma.software/about/media/problem-solving-techniques-part-two#2.-drill-down)
+- SRE Handbook
+     - [Chapter 14 - "Managing Incidents"](https://sre.google/sre-book/managing-incidents/)
+     - [Chapter 15 - "Postmortem Culture"](https://sre.google/sre-book/postmortem-culture/)
