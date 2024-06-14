@@ -125,6 +125,8 @@ The templates below describe the expected contents of an Incident Report. When r
      - **Incident description**: [A short description of the nature of the issue. This provides just enough context for new readers to understand the details of the incident.]
      - **Relevant policies**: [Describe the policies and corresponding sections that result in this problem being diagnosed as an incident.]
      - **Source of incident disclosure**: [CHOICE of "Self Reported" OR "Third Party Reported"]
+
+     NOTE: If notified of an incident by a Third Party Reporter, please respect their privacy by only disclosing their name if affirmativley approved to do so (i.e., use "We received a report from a community member" instead of explicitly naming individuals).
  
 -->
 
