@@ -44,11 +44,25 @@ And:
 - accurately and completely disclose the impact of the incident (e.g., a corpus of mis-issued certificates).
 - describe whether the incident should be considered contained (e.g., because certificate issuance was stopped) or ongoing.
 
-While Full Incident Reports SHOULD be posted as soon as possible, they MUST be posted within two weeks of the incident’s initial disclosure.
+While Full Incident Reports SHOULD be posted as soon as possible, they MUST be posted within 14 days of the incident’s initial disclosure.
+
+### What is considered an incident?
+
+[todo: write the following better]
+The failure of a CA Owner to meet the commitments of the corresponding set of CA/Browser Forum Baseline Requirements, the CCADB Policy, or the corresponding Root Program policy associated with either an inclusion reuqest or an included root is considered an incident.
+
+### What is considered an "initial incident disclosure"?
+[todo - give examples, describe when the clock starts]
+
+[third party report]
+[internal problem repoert]
+
+[If we imagine the following events....]
+[use this as an opportunity to define when the clock starts for revocation?]
 
 ### When should Incident Reports be updated?
 
-CA Owners SHOULD respond promptly to comments and questions, and in no circumstances MUST a request or question linger without a response for more than one week, even if the response is only to acknowledge the request or question and provide a later date when a response will be delivered. Comments from the community SHOULD be acknowledged and addressed by CA Owners.
+CA Owners SHOULD respond promptly to comments and questions, and in no circumstances MUST a request or question linger without a response for more than 7 days , even if the response is only to acknowledge the request or question and provide a later date when a response will be delivered. Comments from the community SHOULD be acknowledged and addressed by CA Owners.
 
 Open Incident Reports MUST be updated:
 - on or before the “Next update” date in the “Whiteboard” field of the bug (note: CA Owners MAY request the "Next update" Whiteboard field be set by a Root Store Operator to align with a specific date related to an open Action Item.);
@@ -85,7 +99,7 @@ All Action Items disclosed in this Incident Report have been completed as descri
 
 ```
 
-Upon completing the above, a final call for comments will be made by a Bugzilla moderator, and the incident closed no less than seven (7) days later.
+Upon completing the above, a final call for comments will be made by a Bugzilla moderator, and the incident closed no less than 7 days later.
 
 ### Incident Report Templates
 
