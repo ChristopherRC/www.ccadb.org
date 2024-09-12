@@ -12,6 +12,10 @@
 
 **Note:** The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" on this page are to be interpreted as described in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 
+### Why is public Incident Reporting considered important?
+
+The public incident reporting process is important because it promotes continuous improvement, information sharing, and highlights opportunities to define and adopt improved practices, policies, and controls. Together, these activities help build a more secure web.
+
 ### Who can submit an Incident Report?
 Anyone should feel encouraged to submit an Incident Report that’s founded upon credible and well-substantiated evidence.
 
@@ -49,12 +53,42 @@ While Full Incident Reports SHOULD be posted as soon as possible, they MUST be p
 ### What is considered an incident?
 
 Minimally, a failure to meet the commitments described in any of the following policies is considered an incident:
-- A CA Owners own policies (e.g., CP, CPS, or combined CP/CPS);
+- A CA Owner's own policies (e.g., CP, CPS, or combined CP/CPS);
 - The corresponding set of CA/Browser Forum Baseline Requirements;
 - The CCADB Policy; or
 - Any applicable Root Store Operator policy.
 
-Root Store Operator policies MAY further describe what those individual programs consider incidents, and additional incident reporting expectations.
+Root Store Operator policies MAY further describe what those individual programs consider incidents, and/or additional incident reporting expectations.
+
+### When should Incident Reports be updated?
+
+CA Owners SHOULD respond promptly to comments and questions, and in no circumstances MUST a request or question linger without a response for more than 7 days, even if the response is only to acknowledge the request or question and provide a later date when a response will be delivered. Comments from the community SHOULD be acknowledged and addressed by CA Owners.
+
+Open Incident Reports MUST be updated:
+- on or before the “Next update” date in the “Whiteboard” field of the bug (note: CA Owners MAY request the "Next update" Whiteboard field be set by a Root Store Operator to align with a specific date related to an open Action Item.);
+- weekly, if a “Next update” date is not recorded;
+- in response to community questions or comments as described above; or
+- when Action Items are changed, completed, or delayed.
+
+In the case of Incident Reports with a Whiteboard field of "Delayed Revocation", Incident Reports MUST be updated every 72 hours to describe a summary of: 
+- the number of certificates have been revoked
+- the number of certificates have NOT YET been revoked
+- the number of certificates planned for revocation that have expired.
+
+### How should Incident Reports be scoped?
+
+There SHOULD be a single Incident Report for each distinct matter, and CA Owners MUST submit an additional, separate Incident Report when:
+- policy requires the revocation of one or more certificates by a certain deadline, such as those in BR Section 4.9, but that deadline will not be or has not been met by the CA Owner (i.e., a delayed revocation Incident Report).
+- in the process of researching one incident, another incident with a distinct root cause and/or remediation is discovered.
+- after an incident is marked resolved in Bugzilla, the incident reoccurs.
+
+Incident Reports MUST be free-standing (i.e., not rely upon the contents of other reports). The Incident Report MAY repeat things previously stated in discussions or Bugzilla comments, in which case the report SHOULD state a summary of previous findings. The existence of data in discussions or Bugzilla comments does not excuse a CA Owner from the task of compiling an Incident Report that aligns with the guidance on this page.
+
+### What are the key characteristics of an incident report?
+
+Incident Reports MUST include:
+- a demonstration of understanding of the root cause(s) of an incident, and
+- a substantive commitment and timeline to changes that clearly and persuasively address the root cause.
 
 ### What should Root Cause Analysis consider?
 
@@ -85,30 +119,6 @@ Effective Root Cause Analysis (RCA) considers the following points:
 
 9. **Continuously improve the process**. RCA is an iterative process. Organizations should continuously refine their RCA approaches based on lessons learned from previous incidents and evolving best practices.
 
-### When should Incident Reports be updated?
-
-CA Owners SHOULD respond promptly to comments and questions, and in no circumstances MUST a request or question linger without a response for more than 7 days, even if the response is only to acknowledge the request or question and provide a later date when a response will be delivered. Comments from the community SHOULD be acknowledged and addressed by CA Owners.
-
-Open Incident Reports MUST be updated:
-- on or before the “Next update” date in the “Whiteboard” field of the bug (note: CA Owners MAY request the "Next update" Whiteboard field be set by a Root Store Operator to align with a specific date related to an open Action Item.);
-- weekly, if a “Next update” date is not recorded;
-- in response to community questions or comments as described above; or
-- when Action Items are changed, completed, or delayed.
-
-In the case of Incident Reports with a Whiteboard field of "Delayed Revocation", Incident Reports MUST be updated every 72 hours to describe a summary of: 
-- the number of certificates have been revoked
-- the number of certificates have NOT YET been revoked
-- the number of certificates planned for revocation that have expired.
-
-### How should Incident Reports be scoped?
-
-There SHOULD be a single Incident Report for each distinct matter, and CA Owners MUST submit an additional, separate Incident Report when:
-- policy requires the revocation of one or more certificates by a certain deadline, such as those in BR Section 4.9, but that deadline will not be or has not been met by the CA Owner (i.e., a delayed revocation Incident Report).
-- in the process of researching one incident, another incident with a distinct root cause and/or remediation is discovered.
-- after an incident is marked resolved in Bugzilla, the incident reoccurs.
-
-Incident Reports MUST be free-standing (i.e., not rely upon the contents of other reports). The Incident Report MAY repeat things previously stated in discussions or Bugzilla comments, in which case the report SHOULD state a summary of previous findings. The existence of data in discussions or Bugzilla comments does not excuse a CA Owner from the task of compiling an Incident Report that aligns with the guidance on this page.
-
 ### How should Incident Reports be closed?
 
 If (1) all Action Items are marked as complete and (2) there are no outstanding comments or questions that need to be addressed, CA Owners SHOULD clearly communicate in a Bugzilla comment when they believe an Incident Report can be closed. This is accomplished by writing a short-summary that includes:
@@ -130,6 +140,7 @@ All Action Items disclosed in this Incident Report have been completed as descri
 ```
 
 Upon completing the above, a final call for comments will be made by a Bugzilla moderator, and the incident closed no less than 7 days later.
+
 
 ### Incident Report Templates
 
