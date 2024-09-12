@@ -48,27 +48,57 @@ While Full Incident Reports SHOULD be posted as soon as possible, they MUST be p
 
 ### What is considered an incident?
 
-[todo: write the following better]
-The failure of a CA Owner to meet the commitments of the corresponding set of CA/Browser Forum Baseline Requirements, the CCADB Policy, or the corresponding Root Program policy associated with either an inclusion reuqest or an included root is considered an incident.
+Minimally, a failure to meet the commitments described in any of the following policies is considered an incident:
+- A CA Owners own policies (e.g., CP, CPS, or combined CP/CPS);
+- The corresponding set of CA/Browser Forum Baseline Requirements;
+- The CCADB Policy; or
+- Any applicable Root Store Operator policy.
 
-### What is considered an "initial incident disclosure"?
-[todo - give examples, describe when the clock starts]
+Root Store Operator policies MAY further describe what those individual programs consider incidents, and additional incident reporting expectations.
 
-[third party report]
-[internal problem repoert]
+### What should Root Cause Analysis consider?
 
-[If we imagine the following events....]
-[use this as an opportunity to define when the clock starts for revocation?]
+Effective Root Cause Analysis (RCA) considers the following points:
+
+1. **Focus on the "why," not just the "what"**. RCA shouldn't just identify what went wrong but should delve deeper into why it happened. This often involves going beyond the immediate technical failure and considering contributing factors like human error, process deficiencies, or system design flaws.
+
+2. **Use a systematic approach**. Employ structured methodologies like the following approaches to help ensure a thorough and organized investigation:
+   - [Chesterton’s Fence](https://fs.blog/chestertons-fence/)
+   - [5 Whys](https://en.wikipedia.org/wiki/Five_whys)
+   - Multi/Second Order Thinking ([1](https://fs.blog/second-order-thinking/), [2](https://betterletter.substack.com/p/second-order-thinking), [3](https://medium.com/@noahmp/second-order-thinking-3fc2a224b131))
+   - [CATWOE](https://www.toolshero.com/problem-solving/catwoe-analysis/)
+   - [Cause and Effect / Fishbone or Ishikawa](https://en.wikipedia.org/wiki/Ishikawa_diagram)
+   - [Drilling Down](https://sigma.software/about/media/problem-solving-techniques-part-two#2.-drill-down)
+   - SRE Handbook Guidance
+       - [Chapter 14](https://sre.google/sre-book/managing-incidents/)
+       - [Chapter 15](https://sre.google/sre-book/postmortem-culture/)
+
+4. **Consider all potential contributing factors**. RCA should consider a broad range of potential causes, including technical issues, human factors, process breakdowns, and external influences. It's crucial to avoid jumping to conclusions or focusing solely on the most obvious cause.
+
+5. **Collect and analyze data**. Data is critical for supporting RCA conclusions. This might involve reviewing logs, monitoring metrics, internal incident reports, and other relevant information to identify patterns and anomalies.
+
+6. **Involve relevant stakeholders**. RCA should be a collaborative effort involving engineers, operators, support teams, and other relevant stakeholders. This helps ensure a diverse range of perspectives and expertise is considered.
+
+7. **Prioritize action items**. The ultimate goal of RCA is to prevent future incidents. Therefore, it's important to identify and prioritize actionable recommendations that address the root causes identified.
+
+8. **Focus on blameless postmortems**.: Emphasize a blameless culture when conducting postmortems. The focus should be on learning from the incident and improving systems, not on assigning blame or punishing individuals.
+
+9. **Continuously improve the process**. RCA is an iterative process. Organizations should continuously refine their RCA approaches based on lessons learned from previous incidents and evolving best practices.
 
 ### When should Incident Reports be updated?
 
-CA Owners SHOULD respond promptly to comments and questions, and in no circumstances MUST a request or question linger without a response for more than 7 days , even if the response is only to acknowledge the request or question and provide a later date when a response will be delivered. Comments from the community SHOULD be acknowledged and addressed by CA Owners.
+CA Owners SHOULD respond promptly to comments and questions, and in no circumstances MUST a request or question linger without a response for more than 7 days, even if the response is only to acknowledge the request or question and provide a later date when a response will be delivered. Comments from the community SHOULD be acknowledged and addressed by CA Owners.
 
 Open Incident Reports MUST be updated:
 - on or before the “Next update” date in the “Whiteboard” field of the bug (note: CA Owners MAY request the "Next update" Whiteboard field be set by a Root Store Operator to align with a specific date related to an open Action Item.);
 - weekly, if a “Next update” date is not recorded;
 - in response to community questions or comments as described above; or
 - when Action Items are changed, completed, or delayed.
+
+In the case of Incident Reports with a Whiteboard field of "Delayed Revocation", Incident Reports MUST be updated every 72 hours to describe a summary of: 
+- the number of certificates have been revoked
+- the number of certificates have NOT YET been revoked
+- the number of certificates planned for revocation that have expired.
 
 ### How should Incident Reports be scoped?
 
@@ -227,7 +257,7 @@ The templates below describe the expected contents of an Incident Report. When r
 - Note that it is not sufficient for these action items to simply stop this incident, they MUST create additional protections to prevent future incidents.
 - Each Action Item MUST state:
      - A detailed description of the action to be taken.
-     - A classification of whether the action will help Prevent future incidents, Mitigate the impact of future incidents, or Detect future incidents. CA Owners are encouraged to propose action items in all three categories, with an emphasis on prevention and mitigation.
+     - A classification of whether the action will help Prevent future incidents, Mitigate the impact of future incidents, or Detect future incidents. CA Owners are encouraged to propose action items in all three categories, with an emphasis on prevention and mitigation. 
      - The specific Root Cause that the Action intends to remediate (i.e., each issue entry in the "Root Cause Analysis" and "What didn't go well" Sections MUST be mapped to at least one specific action item)
      - A date by which the action item will be complete.
 
@@ -242,8 +272,17 @@ The templates below describe the expected contents of an Incident Report. When r
 
 **Expectations:**
 - The Appendix is for all supporting data: log files, graphs and charts, etc.
-- In particular, in the case of incidents that directly impact certificates, the Appendix MUST include a listing of the complete certificate details of all affected certificates.
-- The recommended format is to ensure that all affected certificates are logged to CT, then to attach a text file where each line is of the form https://crt.sh/?sha256=[sha256 fingerprint of the pre-certificate].
+- In particular, in the case of incidents that directly impact certificates, the Appendix MUST include a listing of the complete certificate details of all affected certificates  and include the following fields for each:
+     - Pre-certificate SHA-256 Hash
+     - Certificate SHA-256 Hash
+     - Subject
+     - Issuer
+     - Not Before
+     - Not After
+     - Serial # (hex)
+     - Is Revoked? ("Yes", "No", "N/A", or "Delayed")
+     - Revocation Date (Actual Date, Planned Date, or "NA")
+     - Revocation Reason
 - When the incident being reported involves an S/MIME certificate, if disclosure of personally identifiable information in the certificate MAY be contrary to applicable law, please provide at least the certificate serial number and SHA256 hash of the certificate.
 
 -->
