@@ -60,7 +60,7 @@ Root Store Operator policies MAY further describe what those individual programs
 
 Effective Root Cause Analysis (RCA) considers the following points:
 
-1. **Focus on the "why," not just the "what"**. RCA shouldn't just identify what went wrong but should delve deeper into why it happened. This often involves going beyond the immediate technical failure and considering contributing factors like human error, process deficiencies, or system design flaws.
+1. **Focus on the "why," not just the "what"**. RCA shouldn't just identify what went wrong but should delve deeper into why it happened. This often involves going beyond the immediate technical or policy failure and considering contributing factors like human error, process deficiencies, or system design flaws.
 
 2. **Use a systematic approach**. Employ structured methodologies like the following approaches to help ensure a thorough and organized investigation:
    - [Chesterton’s Fence](https://fs.blog/chestertons-fence/)
@@ -73,7 +73,7 @@ Effective Root Cause Analysis (RCA) considers the following points:
        - [Chapter 14](https://sre.google/sre-book/managing-incidents/)
        - [Chapter 15](https://sre.google/sre-book/postmortem-culture/)
 
-4. **Consider all potential contributing factors**. RCA should consider a broad range of potential causes, including technical issues, human factors, process breakdowns, and external influences. It's crucial to avoid jumping to conclusions or focusing solely on the most obvious cause.
+4. **Consider all potential contributing factors**. RCA should consider a broad range of potential causes, including technical issues, policy issues, human factors, process breakdowns, and external influences. It's crucial to avoid jumping to conclusions or focusing solely on the most obvious cause.
 
 5. **Collect and analyze data**. Data is critical for supporting RCA conclusions. This might involve reviewing logs, monitoring metrics, internal incident reports, and other relevant information to identify patterns and anomalies.
 
