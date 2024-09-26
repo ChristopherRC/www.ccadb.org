@@ -155,8 +155,7 @@ All Action Items disclosed in this Incident Report have been completed as descri
 
 ```
 
-Upon completing the above, a final call for comments will be made by a Bugzilla moderator, and the incident closed no less than 7 days later.
-
+Upon completing the above, a final call for comments will be made by a Bugzilla moderator, and the incident will be closed accordingly.
 
 ### Incident Report Templates
 
