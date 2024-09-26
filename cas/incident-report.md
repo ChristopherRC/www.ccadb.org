@@ -289,10 +289,10 @@ The templates below describe the expected contents of an Incident Report. When r
 - This section MUST contain a list of remediation items that will be undertaken to ensure that similar incidents do not reoccur in the future.
 - Note that it is not sufficient for these action items to simply stop this incident, they MUST create additional protections to prevent future incidents.
 - Each Action Item MUST state:
-     - A detailed description of the action to be taken.
-     - A classification of whether the action will help Prevent future incidents, Mitigate the impact of future incidents, or Detect future incidents. CA Owners are encouraged to propose action items in all three categories, with an emphasis on prevention and mitigation. 
-     - The specific Root Cause that the Action intends to remediate (i.e., each issue entry in the "Root Cause Analysis" and "What didn't go well" Sections MUST be mapped to at least one specific action item)
-     - A date by which the action item will be complete.
+     - **Action Item Description** [A detailed description of the action to be taken.]
+     - **Kind** [A classification of whether the action will help Prevent future incidents, Mitigate the impact of future incidents, or Detect future incidents. CA Owners are encouraged to propose action items in all three categories, with an emphasis on Prevent and Mitigate.] 
+     - **Corresponding Root Cause(s)** [The specific Root Cause that the Action intends to remediate (i.e., each issue entry in the "Root Cause Analysis" and "What didn't go well" Sections MUST be mapped to at least one specific action item)]
+     - **Due Date** [A date by which the action item will be complete.]
 
 | Action Item | Kind    | Corresponding Root Cause(s) | Due Date   |
 | ----------- | ----    | --------------------------- | ---------- |
