@@ -200,7 +200,7 @@ The templates below describe the expected contents of an Incident Report. When r
      - **Relevant policies**: [Describe the policy name(s), applicable version(s), and corresponding section(s) that result in this problem being diagnosed as an incident.]
      - **Source of incident disclosure**: [CHOICE of "Self Reported", "Third Party Reported", or "AUDIT".]
 
-     NOTE: If notified of an incident by a Third Party Reporter, please respect their privacy by only disclosing their name if affirmativley approved to do so (i.e., use "We received a report from a community member." instead of explicitly naming individuals).
+     NOTE: If notified of an incident by a Third Party Reporter, please respect their privacy by only disclosing their name if affirmatively approved to do so (i.e., use "We received a report from a community member." instead of explicitly naming individuals).
  
 -->
 
