@@ -276,6 +276,7 @@ The templates below describe the expected contents of an Incident Report. When r
 - **What went well:** [a list of things that caused the incident to have less impact than it otherwise could have, such as early detection, rapid response, or good safety mechanisms. This section provides an opportunity for others to learn from the good practices of this CA Owner.]
 - **What didn’t go well:** [a list of things that caused the incident to have more impact than it otherwise would have, such as missing checks or unclear documentation. Each item here MUST have at least one corresponding Action Item below and SHOULD provide opportunities for others to ensure they make similar improvements if they haven’t already.]
 - **Where we got lucky:** [a list of things that went well, but which cannot be relied upon, such as early detection by an external security researcher or limited impact simply due to a small number of requests. Items here SHOULD generally also have corresponding Action Items, so that the CA Owner doesn’t have to rely on luck in the future.]
+- ** Other:** [anything else you’d like to share that’s not described above.]
 
 -->
 
