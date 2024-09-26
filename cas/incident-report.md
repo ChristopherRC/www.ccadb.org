@@ -13,13 +13,27 @@
 **Note:** The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" on this page are to be interpreted as described in [RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 
 ### Why is public Incident Reporting considered important?
-
-The public incident reporting process is important because it promotes continuous improvement, information sharing, and highlights opportunities to define and adopt improved practices, policies, and controls. Together, these activities help build a more secure web.
+The public Incident Reporting process is important because it promotes continuous improvement, information sharing, and highlights opportunities to define and adopt improved practices, policies, and controls. Together, these activities help build a more secure web.
 
 ### Who can submit an Incident Report?
 Anyone should feel encouraged to submit an Incident Report that’s founded upon credible and well-substantiated evidence.
 
-Some Root Store Operator policies require CA Owners to submit an Incident Report as described on this page after self-discovering or being made aware of an Incident (e.g., receiving and corroborating an issue described in a Certificate Problem Report).
+Some Root Store Operator policies require CA Owners to submit an Incident Report as described on this page after self-discovering or being made aware of an Incident (e.g., receiving and corroborating an issue described in a [Certificate Problem Report](https://cabforum.org/working-groups/server/baseline-requirements/requirements/#161-definitions)).
+
+### Are there other ways to become involved in the Incident Reporting process?
+Absolutely! There are many ways to participate in the Incident Reporting process beyond submitting new reports. Everyone is encouraged to actively contribute by commenting on existing reports and engaging in constructive discussions. This can include, but is not limited to:
+
+- Providing additional information,
+- Asking clarifying questions,
+- Discussing technical aspects of the incident,
+- Suggesting corrective actions,
+- Highlighting opportunities for improvement,
+- Contributing lints to open source linting projects to promote improved future issue detection/prevention, and
+- Sharing lessons learned from past experiences.
+
+Individuals representing CA Owners are especially encouraged to participate broadly in the Incident Reporting process, extending their contributions beyond incidents involving only their own organization. Sharing insights and perspectives across organizational boundaries fosters a collaborative learning environment and strengthens the overall security posture of the Web PKI ecosystem.
+
+To ensure productive dialogue, please keep all comments constructive, relevant to the report, and in line with the [CCADB Code of Conduct](https://docs.google.com/document/d/19ALqEvHtTE6OUTz2FaOXrU9gruIdvia5EDh3hXeGpZA/edit#heading=h.cumc0pgd1s7c).
 
 ### How do I submit an Incident Report?
 Create a new Bugzilla issue by filling out the Summary and Description fields of [this form](https://bugzilla.mozilla.org/enter_bug.cgi?format=__default__&product=CA%20Program&component=CA%20Certificate%20Compliance&bug_type=task). 
@@ -107,7 +121,7 @@ Effective Root Cause Analysis (RCA) considers the following points:
        - [Chapter 14](https://sre.google/sre-book/managing-incidents/)
        - [Chapter 15](https://sre.google/sre-book/postmortem-culture/)
 
-4. **Consider all potential contributing factors**. RCA should consider a broad range of potential causes, including technical issues, policy issues, human factors, process breakdowns, and external influences. It's crucial to avoid jumping to conclusions or focusing solely on the most obvious cause.
+4. **Consider all potential contributing factors**. RCA should consider a broad range of potential causes, including technical issues, policy issues, human factors, process breakdowns, and external influences. It's crucial to avoid jumping to conclusions or focusing solely on the most obvious cause(s).
 
 5. **Collect and analyze data**. Data is critical for supporting RCA conclusions. This might involve reviewing logs, monitoring metrics, internal incident reports, and other relevant information to identify patterns and anomalies.
 
@@ -177,7 +191,7 @@ The templates below describe the expected contents of an Incident Report. When r
 **Expectations:**
 
  - This section MUST clearly address the following:
-     - **CA Owner CCADB Unique ID:** [The CCADB Unique ID value corresponding to the CA Owner's "CA Owner/Certificate" record disclosed in the CCADB]
+     - **CA Owner CCADB Unique ID:** [The CCADB Unique ID value corresponding to the CA Owner's "CA Owner/Certificate" record disclosed in the CCADB.]
      - **Incident description**: [A short description of the nature of the issue. This provides just enough context for new readers to understand the details of the incident.]
      - **Timeline Summary:
           - Non-compliance Start Date
@@ -186,7 +200,7 @@ The templates below describe the expected contents of an Incident Report. When r
      - **Relevant policies**: [Describe the policy name(s), applicable version(s), and corresponding section(s) that result in this problem being diagnosed as an incident.]
      - **Source of incident disclosure**: [CHOICE of "Self Reported", "Third Party Reported", or "AUDIT".]
 
-     NOTE: If notified of an incident by a Third Party Reporter, please respect their privacy by only disclosing their name if affirmativley approved to do so (i.e., use "We received a report from a community member" instead of explicitly naming individuals).
+     NOTE: If notified of an incident by a Third Party Reporter, please respect their privacy by only disclosing their name if affirmativley approved to do so (i.e., use "We received a report from a community member." instead of explicitly naming individuals).
  
 -->
 
