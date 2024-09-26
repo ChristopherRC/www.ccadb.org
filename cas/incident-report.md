@@ -71,8 +71,8 @@ Open Incident Reports MUST be updated:
 - when Action Items are changed, completed, or delayed.
 
 In the case of Incident Reports with a Whiteboard field of "Delayed Revocation", Incident Reports MUST be updated every 72 hours to describe a summary of: 
-- the number of certificates have been revoked
-- the number of certificates have NOT YET been revoked
+- the number of certificates that have been revoked
+- the number of certificates that have NOT YET been revoked
 - the number of certificates planned for revocation that have expired.
 
 ### How should Incident Reports be scoped?
@@ -177,9 +177,14 @@ The templates below describe the expected contents of an Incident Report. When r
 **Expectations:**
 
  - This section MUST clearly address the following:
+     - **CA Owner CCADB Unique ID:** [The CCADB Unique ID value corresponding to the CA Owner's "CA Owner/Certificate" record disclosed in the CCADB]
      - **Incident description**: [A short description of the nature of the issue. This provides just enough context for new readers to understand the details of the incident.]
-     - **Relevant policies**: [Describe the policies and corresponding sections that result in this problem being diagnosed as an incident.]
-     - **Source of incident disclosure**: [CHOICE of "Self Reported" OR "Third Party Reported"]
+     - **Timeline Summary:
+          - Non-compliance Start Date
+          - Non-compliance Identified Date
+          - Non-compliance End Date
+     - **Relevant policies**: [Describe the policy name(s), applicable version(s), and corresponding section(s) that result in this problem being diagnosed as an incident.]
+     - **Source of incident disclosure**: [CHOICE of "Self Reported", "Third Party Reported", or "AUDIT".]
 
      NOTE: If notified of an incident by a Third Party Reporter, please respect their privacy by only disclosing their name if affirmativley approved to do so (i.e., use "We received a report from a community member" instead of explicitly naming individuals).
  
@@ -241,8 +246,9 @@ The templates below describe the expected contents of an Incident Report. When r
 
 #### Issue [#]: [Title]
 - **Description:** [A detailed description of the specific issue.]
-- **Issue Onset:** [Date when the issue began]
-- **Issue Detection:** [Date when the issue was detected or otherwise made known]
+- **Issue Onset:** [Date when the issue began.]
+- **Issue Detection:** [Date when the issue was detected or otherwise made known.]
+- **Issue Resolution:** [Actual or planned date when the issue will be considered resolved.]
 - **Symptoms that Led to Detection**: [A detailed description of the circumstances that led to the detection of the issue.]
 - **How the Issue Avoided Detection**: [A detailed description of how the issue was not detected earlier.]
 - **Root Cause Analysis Methodology Used**([OPTIONAL, but RECOMMENDED]): [A description of the methodology used to derive the issue described above (e.g., "5-Whys", Fishbone Diagram, Pareto Analysis, etc.)]
@@ -283,7 +289,7 @@ The templates below describe the expected contents of an Incident Report. When r
 
 **Expectations:**
 - The Appendix is for all supporting data: log files, graphs and charts, etc.
-- In particular, in the case of incidents that directly impact certificates, the Appendix MUST include a listing of the complete certificate details of all affected certificates  and include the following fields for each:
+- In particular, in the case of incidents that directly impact certificates, the Appendix MUST include a listing of the complete certificate details of all affected certificates and include the following fields for each:
      - Pre-certificate SHA-256 Hash
      - Certificate SHA-256 Hash
      - Subject
