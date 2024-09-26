@@ -62,6 +62,8 @@ And:
 - accurately and completely disclose the impact of the incident (e.g., a corpus of mis-issued certificates).
 - describe whether the incident should be considered contained (e.g., because certificate issuance was stopped) or ongoing.
 
+If the described impact of the incident is later found to be inaccurate, the CA Owner must clearly communicate a correction, identifying when each following change was detected, the circumstances that led to the inaccuracy, and how this will be avoided in the future.
+
 While Full Incident Reports SHOULD be posted as soon as possible, they MUST be posted within 14 days of the incident’s initial disclosure.
 
 ### What is considered an incident?
@@ -84,9 +86,9 @@ Open Incident Reports MUST be updated:
 - in response to community questions or comments as described above; or
 - when Action Items are changed, completed, or delayed.
 
-In the case of Incident Reports with a Whiteboard field of "Delayed Revocation", Incident Reports MUST be updated every 72 hours to describe a summary of: 
-- the number of certificates that have been revoked
-- the number of certificates that have NOT YET been revoked
+In the case of Incident Reports with a Whiteboard field of "revocation-delay", Incident Reports MUST be updated every 72 hours to describe a summary of: 
+- the number of certificates that have been revoked.
+- the number of certificates that have NOT YET been revoked.
 - the number of certificates planned for revocation that have expired.
 
 ### How should Incident Reports be scoped?
@@ -127,7 +129,7 @@ Effective Root Cause Analysis (RCA) considers the following points:
 
 6. **Involve relevant stakeholders**. RCA should be a collaborative effort involving engineers, operators, support teams, and other relevant stakeholders. This helps ensure a diverse range of perspectives and expertise is considered.
 
-7. **Prioritize action items**. The ultimate goal of RCA is to prevent future incidents. Therefore, it's important to identify and prioritize actionable recommendations that address the root causes identified.
+7. **Prioritize action items**. The ultimate goal of RCA is to prevent future incidents caused by the same failures. Therefore, it's important to identify and prioritize actionable recommendations that address the root causes identified.
 
 8. **Focus on blameless postmortems**. Emphasize a blameless culture when conducting postmortems. The focus should be on learning from the incident and improving systems, not on assigning blame or punishing individuals.
 
@@ -218,7 +220,7 @@ The templates below describe the expected contents of an Incident Report. When r
           - (a) describe a heuristic that would allow a third party to assemble the full corpus of affected certificates, if not provided in the Appendix (e.g., "Any certificate containing policy OID 1.2.3.4.5.6 and issued between 11/13/2024 and 4/11/2024 is affected by this incident. Certificates that have been revoked or are expired are omitted from the certificate list disclosed in the Appendix."), 
           - (b) clearly explain why this isn't possible (e.g., "This incident affected every certificate issued between 5/25/2023 and 6/15/2024 that relied upon BR Validation Method 3.2.2.4.19. Because the relied upon validation method is not described in a certificate, this heuristic cannot be used by a third party to assemble the full corpus of affected certificates. Certificates that have been revoked or expired have been omitted from the certificate list disclosed in the Appendix.), or
           - (c) the full corpus of affected certificates are disclosed in the Appendix.]
-     - **Was issuance stopped in response to this incident, and why or why not?:** [yes/no - explanation (e.g., "Yes. As described in the incident timeline, we stopped issuance after learning of this issue to correct the corresponding certificate profile.")]
+     - **Was issuance stopped in response to this incident, and why or why not?:** [yes/no - explanation (e.g., "Yes. As described in the incident timeline, issuance was stopped after learning of this issue to correct the corresponding certificate profile.")]
      - **Additional Considerations:** [share any additional considerations that might be useful in describing the size and nature of the incident. For example, if the issue affected pre-certificates and "final" certificates differently, describe how and why in more detail here.]
 
 -->
