@@ -129,13 +129,13 @@ Effective Root Cause Analysis (RCA) considers the following points:
 
 7. **Prioritize action items**. The ultimate goal of RCA is to prevent future incidents. Therefore, it's important to identify and prioritize actionable recommendations that address the root causes identified.
 
-8. **Focus on blameless postmortems**.: Emphasize a blameless culture when conducting postmortems. The focus should be on learning from the incident and improving systems, not on assigning blame or punishing individuals.
+8. **Focus on blameless postmortems**. Emphasize a blameless culture when conducting postmortems. The focus should be on learning from the incident and improving systems, not on assigning blame or punishing individuals.
 
 9. **Continuously improve the process**. RCA is an iterative process. Organizations should continuously refine their RCA approaches based on lessons learned from previous incidents and evolving best practices.
 
 ### How should Incident Reports be closed?
 
-If (1) all Action Items are marked as complete and (2) there are no outstanding comments or questions that need to be addressed, CA Owners SHOULD clearly communicate in a Bugzilla comment when they believe an Incident Report can be closed. This is accomplished by writing a short-summary that includes:
+If (1) all Action Items are marked as complete and (2) there are no outstanding comments or questions that need to be addressed, CA Owners MUST clearly communicate in a Bugzilla comment when they believe an Incident Report can be closed. This is accomplished by writing a short-summary that includes:
 - a description of the incident, its root cause(s), and remediation.
 - a summary of all commitments made in response to the incident.
 - an attestation that all Action Items have been completed.
@@ -194,9 +194,9 @@ The templates below describe the expected contents of an Incident Report. When r
      - **CA Owner CCADB Unique ID:** [The CCADB Unique ID value corresponding to the CA Owner's "CA Owner/Certificate" record disclosed in the CCADB.]
      - **Incident description**: [A short description of the nature of the issue. This provides just enough context for new readers to understand the details of the incident.]
      - **Timeline Summary:
-          - Non-compliance Start Date
-          - Non-compliance Identified Date
-          - Non-compliance End Date
+          - Non-compliance Start Date: [When the non-compliance began.]
+          - Non-compliance Identified Date: [When the non-compliance was detected.]
+          - Non-compliance End Date: [When the non-compliance ended or is expected to end.]
      - **Relevant policies**: [Describe the policy name(s), applicable version(s), and corresponding section(s) that result in this problem being diagnosed as an incident.]
      - **Source of incident disclosure**: [CHOICE of "Self Reported", "Third Party Reported", or "AUDIT".]
 
@@ -304,7 +304,7 @@ The templates below describe the expected contents of an Incident Report. When r
 
 **Expectations:**
 - The Appendix is for all supporting data: log files, graphs and charts, etc.
-- In particular, in the case of incidents that directly impact certificates, the Appendix MUST include a listing of the complete certificate details of all affected certificates and include the following fields for each:
+- In particular, in the case of incidents that directly impact certificates, the Appendix MUST include a comma separated listing of certificate details of all affected certificates and include the following fields for each:
      - Pre-certificate SHA-256 Hash
      - Certificate SHA-256 Hash
      - Subject
@@ -312,8 +312,8 @@ The templates below describe the expected contents of an Incident Report. When r
      - Not Before
      - Not After
      - Serial # (hex)
-     - Is Revoked? ("Yes", "No", "N/A", or "Delayed")
-     - Revocation Date (Actual Date, Planned Date, or "NA")
+     - Is Revoked? ("Yes", "Planned”,"Delayed", or “N/A" (for expired))
+     - Revocation Date (Actual Date, Planned Date, or "N/A")
      - Revocation Reason
 - When the incident being reported involves an S/MIME certificate, if disclosure of personally identifiable information in the certificate MAY be contrary to applicable law, please provide at least the certificate serial number and SHA256 hash of the certificate.
 
