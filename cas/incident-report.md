@@ -62,7 +62,7 @@ And:
 - accurately and completely disclose the impact of the incident (e.g., a corpus of mis-issued certificates).
 - describe whether the incident should be considered contained (e.g., because certificate issuance was stopped) or ongoing.
 
-If the described impact of the incident is later found to be inaccurate, the CA Owner must clearly communicate a correction, identifying when each following change was detected, the circumstances that led to the inaccuracy, and how this will be avoided in the future.
+If the described impact of the incident is later found to be inaccurate, the CA Owner MUST clearly communicate a correction, identifying when each following change was detected, the circumstances that led to the inaccuracy, and how this will be avoided in the future.
 
 While Full Incident Reports SHOULD be posted as soon as possible, they MUST be posted within 14 days of the incident’s initial disclosure.
 
@@ -135,11 +135,36 @@ Effective Root Cause Analysis (RCA) considers the following points:
 
 9. **Continuously improve the process**. RCA is an iterative process. Organizations should continuously refine their RCA approaches based on lessons learned from previous incidents and evolving best practices.
 
+### What is considered an ongoing commitment? 
+An ongoing commitment is a formal pledge made by a CA Owner to address underlying issues and improve practices in response to an incident. These commitments extend beyond immediate incident remediation and demonstrate a sustained effort to enhance security, transparency, and/or accountability within the Web PKI ecosystem.
+
+Effective ongoing commitments considers the following points:
+
+1. **Specificity**. The commitment clearly outlines what the CA Owner will do, including the intended outcome, target completion timeframe, and any relevant metrics or indicators.
+ 
+2. **Actionability**: The commitment describes concrete steps the CA Owner will take, ensuring it's not merely a statement of intent or a vague promise.
+ 
+3. **Measurability**: The commitment includes a way to track progress and assess whether the CA has fulfilled its pledge. This could involve public reporting, audits, or other verifiable means.
+ 
+4. **Relevance**: The commitment directly relates to the incident report's findings and addresses the identified issues or concerns.
+ 
+5. **Impact**: The commitment aims to bring about positive change and improve the Web PKI ecosystem, either by preventing similar incidents or mitigating their potential impact.
+
+While both action items and ongoing commitments contribute to addressing the root cause(s), they are intended to serve distinct purposes and have unique characteristics:
+
+
+| Characteristic        | Action Item                    | Ongoing Commitment                             |
+| --------------------- | ------------------------------ | ---------------------------------------------- |
+| **Objective**         | Resolve the immediate incident | Prevent future incidents and improve practices |
+| **Scope**             | Narrow, specific tasks         | Broad, strategic initiatives                   |
+| **Timeframe**         | Short-term, with a deadline    | Long-term, continuous effort                   |
+| **Example**           | “We will revoke all mis-issued certificates within the next 48 hours. By that time, all revoked certificates will appear on the CRL located at $location.” <br><br> “We will implement Version 1.0 of pkimetal in our production environment for pre-issuance linting by $date.”  | “To reduce the likelihood of certificate mis-issuance, we will perform pre-issuance linting using pkimetal with the auto-detect profile set for all certificates issued after $date.  <br><br> Any error returned by pkimetal will result in blocking issuance and will necessitate manual review by at least two members of our compliance team.  <br><br> We will update pkimetal within 7 days after an updated release is made available.  <br><br> The presence of linting failures where certificates were issued more than 7 days after a new lint was released will represent a failure of this ongoing commitment.” |
+
 ### How should Incident Reports be closed?
 
 If (1) all Action Items are marked as complete and (2) there are no outstanding comments or questions that need to be addressed, CA Owners MUST clearly communicate in a Bugzilla comment when they believe an Incident Report can be closed. This is accomplished by writing a short-summary that includes:
 - a description of the incident, its root cause(s), and remediation.
-- a summary of all commitments made in response to the incident.
+- a summary of all ongoing commitments made in response to the incident.
 - an attestation that all Action Items have been completed.
 
 CA Owners MUST use the template below when providing an incident closure summary.
@@ -149,7 +174,7 @@ CA Owners MUST use the template below when providing an incident closure summary
 - **Incident Description**: [A few sentences summarizing the incident.]
 - **Incident Root Cause(s)**: [A few sentences summarizing the root cause(s).]
 - **Remediation Description** [A few sentences summarizing the incident's remediation.]
-- **Commitment Summary**: [A few sentences summarizing ongoing commitments made in response to this incident.]
+- **Commitment Summary**: [List ongoing commitments made in response to this incident.]
 
 All Action Items disclosed in this Incident Report have been completed as described, and we request its closure.
 
