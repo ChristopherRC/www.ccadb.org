@@ -282,8 +282,6 @@ The templates below describe the expected contents of an Incident Report. When r
 - It is unusual for an incident to have a single root cause; often there is a confluence of several issues such as a software bug, insufficient checks, and a malformed request.
 - Make sure that all contributing causes are identified and described, including noting when they first arose and how they avoided detection until they were discovered or identified. 
 
-**Preferred reporting format:**
-
 #### Issue [#]: [Title]
 - **Description:** [A detailed description of the specific issue.]
 - **Issue Onset:** [Date when the issue began.]
