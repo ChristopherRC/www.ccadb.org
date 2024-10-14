@@ -174,7 +174,7 @@ CA Owners MUST use the template below when providing an incident closure summary
 - **Incident Description**: [A few sentences summarizing the incident.]
 - **Incident Root Cause(s)**: [A few sentences summarizing the root cause(s).]
 - **Remediation Description** [A few sentences summarizing the incident's remediation.]
-- **Commitment Summary**: [List ongoing commitments made in response to this incident.]
+- **Commitment Summary**: [A list of ongoing commitments made in response to this incident.]
 
 All Action Items disclosed in this Incident Report have been completed as described, and we request its closure.
 
