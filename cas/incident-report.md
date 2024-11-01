@@ -52,7 +52,7 @@ If being reported by the CA Owner corresponding with an incident, all fields inc
 
 ### When are Incident Reports expected?
 
-Within 72 hours of the CA Owner being made aware of an incident (i.e., “initial incident disclosure”), it MUST 
+Within 72 hours of the CA Owner being made aware of an incident (i.e., "initial incident disclosure"), the CA Owner MUST 
 
 Either:
 1) disclose a Preliminary or Full Incident Report; or
@@ -70,7 +70,7 @@ While Full Incident Reports SHOULD be posted as soon as possible, they MUST be p
 
 Minimally, a failure to meet the commitments described in any of the following policies is considered an incident:
 - A CA Owner's own policies (e.g., CP, CPS, or combined CP/CPS);
-- The corresponding set of CA/Browser Forum Baseline Requirements;
+- Applicable requirements promulgated by the CA/Browser Forum;
 - The CCADB Policy; or
 - Any applicable Root Store Operator policy.
 
@@ -78,17 +78,17 @@ Root Store Operator policies MAY further describe what those individual programs
 
 ### When should Incident Reports be updated?
 
-CA Owners SHOULD respond promptly to comments and questions, and in no circumstances MUST a request or question linger without a response for more than 7 days, even if the response is only to acknowledge the request or question and provide a later date when a response will be delivered. Comments from the community SHOULD be acknowledged and addressed by CA Owners.
+CA Owners SHOULD respond promptly to comments and questions, and in no circumstances MUST a request or question linger without a response for more than 7 days, even if the response is only to acknowledge the request or question and provide a later date when a response will be delivered.
 
 Open Incident Reports MUST be updated:
-- on or before the “Next update” date in the “Whiteboard” field of the bug (note: CA Owners MAY request the "Next update" Whiteboard field be set by a Root Store Operator to align with a specific date related to an open Action Item.);
-- weekly, if a “Next update” date is not recorded;
+- on or before the "Next update" date in the "Whiteboard" field of the bug (note: CA Owners MAY request the "Next update" Whiteboard field be set by a Root Store Operator to align with a specific date related to an open Action Item.);
+- weekly, if a "Next update" date is not recorded;
 - in response to community questions or comments as described above; or
 - when Action Items are changed, completed, or delayed.
 
 In the case of Incident Reports with a Whiteboard field of "revocation-delay", Incident Reports MUST be updated every 72 hours to describe a summary of: 
-- the number of certificates that have been revoked.
-- the number of certificates that have NOT YET been revoked.
+- the number of certificates that have been revoked;
+- the number of certificates that have NOT YET been revoked; and
 - the number of certificates planned for revocation that have expired.
 
 ### How should Incident Reports be scoped?
@@ -110,7 +110,7 @@ Incident Reports MUST include:
 
 Effective Root Cause Analysis (RCA) considers the following points:
 
-1. **Focus on the "why," not just the "what"**. RCA shouldn't just identify what went wrong but should delve deeper into why it happened. This often involves going beyond the immediate technical or policy failure and considering contributing factors like human error, process deficiencies, or system design flaws.
+1. **Focus on the "why," not just the "what"**. RCAs shouldn't just identify what went wrong but should delve deeper into why it happened. This often involves going beyond the immediate technical or policy failure and considering contributing factors like human error, process deficiencies, or system design flaws.
 
 2. **Use a systematic approach**. Employ structured methodologies like the following approaches to help ensure a thorough and organized investigation:
    - [Chesterton’s Fence](https://fs.blog/chestertons-fence/)
@@ -123,13 +123,13 @@ Effective Root Cause Analysis (RCA) considers the following points:
        - [Chapter 14](https://sre.google/sre-book/managing-incidents/)
        - [Chapter 15](https://sre.google/sre-book/postmortem-culture/)
 
-4. **Consider all potential contributing factors**. RCA should consider a broad range of potential causes, including technical issues, policy issues, human factors, process breakdowns, and external influences. It's crucial to avoid jumping to conclusions or focusing solely on the most obvious cause(s).
+4. **Consider all potential contributing factors**. RCAs should consider a broad range of potential causes, including technical issues, policy issues, human factors, process breakdowns, and external influences. It's crucial to avoid jumping to conclusions or focusing solely on the most obvious cause(s).
 
 5. **Collect and analyze data**. Data is critical for supporting RCA conclusions. This might involve reviewing logs, monitoring metrics, internal incident reports, and other relevant information to identify patterns and anomalies.
 
-6. **Involve relevant stakeholders**. RCA should be a collaborative effort involving engineers, operators, support teams, and other relevant stakeholders. This helps ensure a diverse range of perspectives and expertise is considered.
+6. **Involve relevant stakeholders**. RCAs should be a collaborative effort involving engineers, operators, support teams, and other relevant stakeholders. This helps ensure a diverse range of perspectives and expertise is considered.
 
-7. **Prioritize action items**. The ultimate goal of RCA is to prevent future incidents caused by the same failures. Therefore, it's important to identify and prioritize actionable recommendations that address the root causes identified.
+7. **Prioritize action items**. The ultimate goal of an RCA is to prevent future incidents caused by the same failures. Therefore, it's important to identify and prioritize actionable recommendations that address the root causes identified.
 
 8. **Focus on blameless postmortems**. Emphasize a blameless culture when conducting postmortems. The focus should be on learning from the incident and improving systems, not on assigning blame or punishing individuals.
 
@@ -138,7 +138,7 @@ Effective Root Cause Analysis (RCA) considers the following points:
 ### What is considered an ongoing commitment? 
 An ongoing commitment is a formal pledge made by a CA Owner to address underlying issues and improve practices in response to an incident. These commitments extend beyond immediate incident remediation and demonstrate a sustained effort to enhance security, transparency, and/or accountability within the Web PKI ecosystem.
 
-Effective ongoing commitments considers the following points:
+Effective ongoing commitments consist of the following:
 
 1. **Specificity**. The commitment clearly outlines what the CA Owner will do, including the intended outcome, target completion timeframe, and any relevant metrics or indicators.
  
@@ -158,7 +158,7 @@ While both action items and ongoing commitments contribute to addressing the roo
 | **Objective**         | Resolve the immediate incident | Prevent future incidents and improve practices |
 | **Scope**             | Narrow, specific tasks         | Broad, strategic initiatives                   |
 | **Timeframe**         | Short-term, with a deadline    | Long-term, continuous effort                   |
-| **Example**           | “We will revoke all mis-issued certificates within the next 48 hours. By that time, all revoked certificates will appear on the CRL located at $location.” <br><br> “We will implement Version 1.0 of pkimetal in our production environment for pre-issuance linting by $date.”  | “To reduce the likelihood of certificate mis-issuance, we will perform pre-issuance linting using pkimetal with the auto-detect profile set for all certificates issued after $date.  <br><br> Any error returned by pkimetal will result in blocking issuance and will necessitate manual review by at least two members of our compliance team.  <br><br> We will update pkimetal within 7 days after an updated release is made available.  <br><br> The presence of linting failures where certificates were issued more than 7 days after a new lint was released will represent a failure of this ongoing commitment.” |
+| **Example**           | "We will revoke all mis-issued certificates within the next 48 hours. By that time, all revoked certificates will appear on the CRL located at $location." <br><br> "We will implement Version 1.0 of pkimetal in our production environment for pre-issuance linting by $date."  | "To reduce the likelihood of certificate mis-issuance, we will perform pre-issuance linting using pkimetal with the auto-detect profile set for all certificates issued after $date.  <br><br> Any error returned by pkimetal will result in blocking issuance and will necessitate manual review by at least two members of our compliance team.  <br><br> We will update pkimetal within 7 days after an updated release is made available.  <br><br> The presence of linting failures where certificates were issued more than 7 days after a new lint was released will represent a failure of this ongoing commitment." |
 
 ### How should Incident Reports be closed?
 
@@ -239,7 +239,7 @@ The templates below describe the expected contents of an Incident Report. When r
 - If certificates are impacted, the Impact Section MUST address the following:
      - **Total number of certificates**: [if applicable, the total count of all certificates affected by the issue(s) described in this Incident Report, including expired and revoked certificates]
      - **Total number of "remaining valid" certificates**: [if applicable, the total count of certificates affected by the issue(s) described in this Incident Report, minus expired and revoked certificates. Minimally, this set of certificates MUST be disclosed in the Appendix section of this report.]
-     - **Affected certificate types:** [A summary of the corresponding CA/Browser Forum policy OIDs (i.e., DV, IV, OV, and EV) that appear in the certificates affected by this incident (e.g., “This incident affects DV and OV certificates.”)]
+     - **Affected certificate types:** [A summary of the corresponding CA/Browser Forum policy OIDs (i.e., DV, IV, OV, and EV) that appear in the certificates affected by this incident (e.g., "This incident affects DV and OV certificates.”)]
      - **Incident heuristic:** [if applicable, EITHER:
           - (a) describe a heuristic that would allow a third party to assemble the full corpus of affected certificates, if not provided in the Appendix (e.g., "Any certificate containing policy OID 1.2.3.4.5.6 and issued between 11/13/2024 and 4/11/2024 is affected by this incident. Certificates that have been revoked or are expired are omitted from the certificate list disclosed in the Appendix."), 
           - (b) clearly explain why this isn't possible (e.g., "This incident affected every certificate issued between 5/25/2023 and 6/15/2024 that relied upon BR Validation Method 3.2.2.4.19. Because the relied upon validation method is not described in a certificate, this heuristic cannot be used by a third party to assemble the full corpus of affected certificates. Certificates that have been revoked or expired have been omitted from the certificate list disclosed in the Appendix.), or
@@ -300,7 +300,7 @@ The templates below describe the expected contents of an Incident Report. When r
 - **What went well:** [a list of things that caused the incident to have less impact than it otherwise could have, such as early detection, rapid response, or good safety mechanisms. This section provides an opportunity for others to learn from the good practices of this CA Owner.]
 - **What didn’t go well:** [a list of things that caused the incident to have more impact than it otherwise would have, such as missing checks or unclear documentation. Each item here MUST have at least one corresponding Action Item below and SHOULD provide opportunities for others to ensure they make similar improvements if they haven’t already.]
 - **Where we got lucky:** [a list of things that went well, but which cannot be relied upon, such as early detection by an external security researcher or limited impact simply due to a small number of requests. Items here SHOULD generally also have corresponding Action Items, so that the CA Owner doesn’t have to rely on luck in the future.]
-- ** Other:** [anything else you’d like to share that’s not described above.]
+- ** Other:** [any other type of "lesson learned" that does not otherwise fit in the above categories, e.g., internal/external circumstances or environmental conditions; discovery of problematic processes, policies, or workflows; communication gaps; resource challenges; task ownership; overlooked warning signs; underutilized tools; etc. Again, each item mentioned here MUST have at least one corresponding Action Item.]
 
 -->
 
@@ -314,7 +314,7 @@ The templates below describe the expected contents of an Incident Report. When r
 - Each Action Item MUST state:
      - **Action Item Description** [A detailed description of the action to be taken.]
      - **Kind** [A classification of whether the action will help Prevent future incidents, Mitigate the impact of future incidents, or Detect future incidents. CA Owners are encouraged to propose action items in all three categories, with an emphasis on Prevent and Mitigate.] 
-     - **Corresponding Root Cause(s)** [The specific Root Cause that the Action intends to remediate (i.e., each issue entry in the "Root Cause Analysis" and "What didn't go well" Sections MUST be mapped to at least one specific action item)]
+     - **Corresponding Root Cause(s)** [The specific Root Cause that the Action intends to remediate (i.e., each problem/issue identified in the "Root Cause Analysis" and "What didn't go well" Sections MUST be mapped to at least one specific action item)]
      - **Due Date** [A date by which the action item will be complete.]
 
 | Action Item | Kind    | Corresponding Root Cause(s) | Due Date   |
@@ -336,7 +336,7 @@ The templates below describe the expected contents of an Incident Report. When r
      - Not Before
      - Not After
      - Serial # (hex)
-     - Is Revoked? ("Yes", "Planned”,"Delayed", or “N/A" (for expired))
+     - Is Revoked? ("Yes", "Planned","Delayed", or "N/A" (for expired))
      - Revocation Date (Actual Date, Planned Date, or "N/A")
      - Revocation Reason
 - When the incident being reported involves an S/MIME certificate, if disclosure of personally identifiable information in the certificate MAY be contrary to applicable law, please provide at least the certificate serial number and SHA256 hash of the certificate.
@@ -345,7 +345,7 @@ The templates below describe the expected contents of an Incident Report. When r
 
 ```
 
-### Are there examples of “good" Incident Reports?
+### Are there examples of "good" Incident Reports?
 
 Here are some examples of good practice, where a CA Owner did most or all of the things recommended above:
 
